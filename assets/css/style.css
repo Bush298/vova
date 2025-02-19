@@ -1,0 +1,350 @@
+
+@font-face {
+    font-family: 'Brushstrike'; 
+	src: url(/assets/fonts/Brushstrike.ttf); 
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-right {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-left{
+    animation: slide-left .7s ease-out;
+}
+
+.animate-right{
+    animation: slide-right .7s ease-out;
+}
+
+:root{
+    --main-font: 'Brushstrike', sans-serif;
+    --secondary-font: 'Bebas Neue', serif;
+    --text-shadow: 20px 15px 5px rgba(0, 0, 0, 0.40);
+    --text-shadow-small: 10px 10px 5px rgba(0, 0, 0, 0.40);
+}
+
+body{
+
+    box-sizing: border-box;
+    
+   
+    background: linear-gradient(#15191E 0%, #838383 100%)
+;    font-family: var(--main-font); 
+	color: white;
+}
+
+.wrapper{
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+
+.header__inner{
+    max-width: 1300px;
+    height: 90px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.logo{
+  
+    width: 130px;
+    height: 170px;
+
+  
+}
+
+
+.appointment-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 235px;
+    height: 45px;
+    
+    transition: all .3s;
+    background: none;
+    text-decoration: none;
+    color:  white;
+    
+
+    border: 3px solid white;
+    border-radius: 15px;
+
+    font-family: var(--secondary-font);
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.appointment-btn:hover{
+    transition: all .3s;
+    background-color: white;
+    color: black;
+}
+
+.insta-logo{
+    width: 130px;
+    text-align: center;
+}
+.insta-logo__img{
+    width: 50px;
+    height: 50px;
+}
+
+/*------------intro ------------------*/
+
+.intro{
+    max-height: 815px;
+
+}
+
+.intro__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro__img{
+    background-image: url(/assets/images/hero.png);
+    width: 574px;
+    height: 816px;
+
+    animation: slide-right .7s ease-out;
+}
+
+.intro__text{
+    width: 50%;
+    
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.intro__title{    
+    margin-top: 100px;
+    width: 685px;
+    
+    font-size: 175px;
+    text-align: center;
+    text-shadow: var(--text-shadow);
+
+    animation: slide-left .7s ease-out;
+}
+
+.intro__subtitle{
+    margin-left: auto;
+    margin-top: 55px;
+    
+    font-family: var(--secondary-font);
+    font-size: 64px;
+    
+    text-shadow: var(--text-shadow-small);
+    animation: slide-left .9s ease-out;
+}
+
+
+.tattoo{
+    max-height: 900px;
+}
+
+.tattoo__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tattoo__text{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tattoo__title{
+    margin-top: 185px;
+
+    font-size: 128px;
+    text-shadow: var(--text-shadow);
+    
+}
+
+.tattoo__icon{
+    color: white;
+    width: 150px;
+    height: 150px;
+    margin-left: 50%;
+
+}
+
+.tattoo__subtitle{
+    margin-top: 85px;
+    
+    font-family: var(--secondary-font);
+    font-size: 40px;
+    text-shadow: var(--text-shadow-small);
+}
+
+.instagram-widget{
+    margin-top: 115px;
+    width: 50%;
+    
+
+    filter: drop-shadow(var(--text-shadow));
+    
+
+}
+
+/*-------------FAQ-------------*/
+
+.faq{
+    min-height: 800px;
+}
+
+.faq__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.faq__title{
+    margin-top: 125px;
+    font-size: 100px;
+
+    text-shadow: var(--text-shadow);
+}
+
+.faq__info{
+    width: 100%;
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.faq__info__option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.option__select{
+    background: none;
+    border: none;
+    color:  white;
+    cursor: pointer;
+
+    font-family: var(--secondary-font);
+    font-size: 48px;
+    text-shadow: var(--text-shadow-small);
+    width: 100%;
+    border-top: 5px solid white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option__select__btn{
+    width: 50px;
+    height: 50px;
+    font-size: 48px;
+}
+
+.plus-minus{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+.hor, .vert{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 50px;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+}
+.vert{
+    display: block;
+    transform: rotate(90deg);
+}
+.vert_off{
+    display: none;
+}
+
+.option__text{
+    display: none;
+    margin-top: 10px;
+    max-width: 90%;
+    text-align: center;
+
+    font-family: var(--secondary-font);
+    font-size: 36px;
+}
+
+.option__text_open{
+    display: block;
+}
+
+/*------APPOINTMENT---------*/
+
+footer{
+   
+}
+
+
+.appointment{
+    min-height: 400px;
+}
+
+.appointment__inner{
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.appointmemt__title{
+    width: 50%;
+    font-size: 100px;
+
+    text-shadow: var(--text-shadow);
+}
+
+.appointment-btn_big{
+    margin: 0 auto;
+    width: 40%;
+   
+    padding: 4% 0;
+
+    font-size: 50px;
+}
+
+
+/* calc(var(--index) * 12) */
