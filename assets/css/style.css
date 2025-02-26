@@ -127,6 +127,8 @@ body{
 @media (max-width: 860px){
     .appointment-btn{
         font-size: 20px;
+        margin: 0 auto;
+        margin-top: 25px;
     }
 }
 
@@ -146,21 +148,27 @@ body{
 }
 @media (max-width: 860px){
     .header__inner{
+        height: auto;
+        margin-top: -65px;
         position: absolute;
         width: 100%;
         z-index: 10000;
-        height: 45px;
-        padding: 20px 0;
-        background-color: rgba(46, 46, 46, 0.8);
-
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+        padding: 10px 0;
+        background-color: rgba(46, 46, 46, 0.4);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%); 
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 0) 100%);
+    }
+    .insta-logo{
+        width: 100px;
     }
     .insta-logo__img{
         height: 40px;
+        margin: 0;
     }
     .logo{
-        padding-top: 10px;
+        width: 207px;
+        height: 275px;
+
     }
 }
 
@@ -221,7 +229,7 @@ body{
 }
 @media (max-width: 860px){
     .intro{
-        min-height: 720px;
+        min-height: 750px;
         max-height: 350px;
     }
     .intro>.wrapper{
@@ -234,8 +242,8 @@ body{
 
         background-size: cover;
         background-repeat: no-repeat;
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
 
         animation: slide-bottom .7s ease-out .10s;
     }
@@ -247,7 +255,7 @@ body{
         font-size: 60px;
         letter-spacing: normal;
         position: absolute;
-        top: 45%;
+        top: 56%;
         right: 0.4em;
         text-shadow: var(--text-shadow-mobile);
         text-align: right;
@@ -257,7 +265,7 @@ body{
     .intro__subtitle{
         position: absolute;
         font-size: 20px;
-        top: 45%;
+        top: 58%;
         letter-spacing: 1px;
        
         right:  1.2em;
@@ -326,7 +334,7 @@ body{
 
 @media (max-width: 860px){
     .tattoo__inner{
-        margin-top: 0;
+        margin-top: 50px;
         flex-direction: column;
         align-items: center;
     }
