@@ -128,7 +128,7 @@ body{
 }
 @media (max-width: 860px){
     .appointment-btn{
-        font-size: 20px;
+        font-size: 1.5em;
         margin: 0 auto;
         margin-top: 2em;
     }
@@ -151,7 +151,7 @@ body{
 @media (max-width: 860px){
     .header__inner{
         height: auto;
-        margin-top: -65px;
+        margin-top: -5em;
         position: absolute;
         width: 100%;
         z-index: 10000;
@@ -164,13 +164,13 @@ body{
         width: 100px;
     }
     .insta-logo__img{
-        height: 40px;
+        height: 2.7em;
         margin: 0;
     }
     .logo{
-        width: 207px;
-        height: 275px;
-        margin-left: -0.7em;
+        width: 15em;
+        height: 20em;
+        margin-left: -1.5em;
     }
 }
 
