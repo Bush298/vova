@@ -189,7 +189,7 @@ body{
 }
 
 .intro__img{
-    background-image: url(/assets/images/hero.webp);
+    background-image: url(/assets/images/hero1.webp);
     width: 50%;
     height: 816px;
 
@@ -521,8 +521,8 @@ body{
 
     .option__text{
         margin: 0;
-        font-size: 0.8em;
-        letter-spacing: -0.2px;
+        font-size:1em;
+        letter-spacing: 0.1px;
         line-height: 1.2em;
     }
 
