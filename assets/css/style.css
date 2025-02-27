@@ -252,6 +252,7 @@ body{
     }
     .intro__text{
         width: 0%;
+        height: 100%;
     }
     .intro__title{
         width: 215px;
