@@ -593,6 +593,9 @@ footer{
     font-size: 20px;
 }
 
+.cat{
+    height: 25px;
+}
 
 @media (max-width: 860px){
     footer{
@@ -623,6 +626,10 @@ footer{
     }
     .copyright__text{
         font-size: 10px;
+    }
+    .cat{
+        height: 0.9em;
+        margin-right: 0.1em;
     }
 }
 
