@@ -56,7 +56,6 @@
 }
 
 body{
-
     box-sizing: border-box;
     overflow-x: hidden;
    
@@ -363,18 +362,19 @@ body{
     }
     .tattoo__title{
         margin-top: 0;
-        font-size: 45px;
+        font-size: 50px;
         text-shadow: var(--text-shadow-mobile);
     }
     .tattoo__subtitle{
-        margin-top: 15px;
-        font-size: 30px;
+        margin-top: 0.25em;
+        font-size: 20px;
         text-shadow: var(--text-shadow-mobile);
     }
     .instagram{
-        margin-top: 30px;
+        margin-top: 2em;
         grid-template-columns: 175px 175px ;
         grid-template-rows: 175px 175px;
+        gap: 0.25em;
            
     }
    
@@ -494,6 +494,7 @@ body{
         margin: 0;
 
         font-size: 35px;
+        text-align: center;
         letter-spacing: 0;
     }
     .faq__info{
@@ -511,6 +512,7 @@ body{
         font-size: 30px;
         height: 40px;
         margin: 0;
+        padding: 0;
     }
 
     .option__text{
