@@ -488,6 +488,9 @@ body{
         margin-top: 3em;
 
     }
+    .faq>.wrapper{
+        padding: 0;
+    }
     .faq__inner{
         margin: 0;
     }
@@ -518,8 +521,9 @@ body{
 
     .option__text{
         margin: 0;
-        font-size: 0.7em;
-        letter-spacing: 0;
+        font-size: 0.8em;
+        letter-spacing: -0.2px;
+        line-height: 1.2em;
     }
 
     .plus-minus{
