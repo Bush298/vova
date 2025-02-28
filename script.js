@@ -19,7 +19,8 @@ for (let infoBtn of infoBtns) {
 
 
 
-const API_URL = 'https://script.google.com/macros/s/AKfycbx1cPKac4KOVO_x86jQp8Me91wukv6E-3ITpA1AXBLtQrMa8iy21Q4Vb0iL5W6rm1LQow/exec'
+const API_URL = 'https://script.google.com/macros/s/AKfycbziNvR2Gohw9rV0Huczjh3VGNhfN0a_JCkhwC56Ce1wY_-mcmIe8vABnYvsEqyLDBvfWA/exec'
+
 let instaContainer = document.querySelector('.instagram')
 
 
@@ -33,10 +34,13 @@ mask.addEventListener('click',()=>{
 let photoBig = document.querySelector('.instagram__photo__big')
 
 function drawPhotos(photos){
+    instaContainer.innerHTML = ''
+
+    photos.sort((a,b) => a.name.localeCompare(b.name, undefined, {numeric: true}))
     console.table(photos)
+
     photos.forEach((photo, i)=>{
         instaContainer.innerHTML += `<div class="instagram__photo"></div>`
-        
     })
     
     let instaPhotos = document.querySelectorAll('.instagram__photo')
