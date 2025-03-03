@@ -45,7 +45,7 @@
                             
                         </div>
                     </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzrB4F5kCSKAvBAWJIvkcWLnCs1aSQsxWB7PZfWYRvwSFnCQ/viewform?usp=dialog" target="_blank" class="appointment-btn">make an appointment</a>
+                    <button class="appointment-btn" onclick="openContactForm()">make an appointment</button>
                 </div>
             </section>
             
@@ -107,6 +107,49 @@
                 </div>
             </section>
 
+            <section class="contact">
+                <div class="wrapper">
+                    <div class="contact__inner">
+                        
+                        <h3 class="appointment__title appointment__title_modal ">almost there <img src="/assets/images/close.svg" onclick="closeContactForm()" class="close-btn"></h3>
+                        
+                        
+                        <form action="" method="post" class="contact-form">
+                            <div class="name-email">
+                                <div class="name-email__block"> 
+                                    <label for="name">Name</label><br>
+                                    <input class="contact-input" type="text" name="name" id="name" autocomplete="off" required>
+                                </div>  
+                           
+                                <div class="name-email__block"> 
+                                    <label for="email">Email</label><br>
+                                    <input class="contact-input" type="email" name="email" id="email" required>
+                                </div>
+                            </div>
+
+                            <label class="description" for="description">Tattoo Description</label>
+                            <textarea type="text" name="description" id="description" maxlength="1500" placeholder="TELL ABOUT YOUR PROJECT" autocomplete="off" class="description-input"></textarea>
+                            
+                            <label for="upload" class="upload">Image References</label>
+                            <div class="upload__btn">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" class="upload-loader__image">
+                                    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M12 12v9"/>
+                                    <path d="m16 16-4-4-4 4"/>
+                                </svg>
+                                <p>ur refs</p>
+                                <input type="file">
+                            </div>
+                            
+                            <label for="checkbox" class="checkbox">
+                                <input type="checkbox" name="checkbox" id="checkbox" placeholder="" required>
+                                <span class="agree-check">I have read and agree to the <a href="">Privacy Policy</a></span>
+                            </label>
+                            <button class="submit">submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
             
         </main>
         
@@ -114,14 +157,14 @@
             <section class="appointment">
                 <div class="wrapper">
                     <div class="appointment__inner">
-                        <h3 class="appointmemt__title">Make An Appointment</h3>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdzrB4F5kCSKAvBAWJIvkcWLnCs1aSQsxWB7PZfWYRvwSFnCQ/viewform?usp=dialog" target="_blank" class="appointment-btn appointment-btn_big">book now</a>
+                        <h3 class="appointment__title">Make An Appointment</h3>
+                        <button class="appointment-btn appointment-btn_big" onclick="openContactForm()">book now</button>
                     </div>
                     <div class="copyright">
                         <p class="copyright__text">2025</p>
                         <img src="/assets/images/Copyright_icon.svg" alt="" loading="lazy"> 
                         <a href="https://www.instagram.com/thebush.max/" target="_blank"><img class="cat" src="/assets/images/cat.gif" alt="" loading="lazy"></a> 
-                        <a href="/privacy.html" class="privacy">Privacy & Policy</a>
+                        <a href="/privacy.html" class="privacy">Privacy Policy</a>
                     </div>
                 </div>
             </section>

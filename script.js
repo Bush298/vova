@@ -60,3 +60,13 @@ async function loadPhotos() {
     drawPhotos(photos)
 }
 loadPhotos()
+
+let contactForm = document.querySelector('.contact')
+
+
+function openContactForm(){
+    contactForm.classList.add('contact_open')
+}
+function closeContactForm(){
+    contactForm.classList.remove('contact_open')
+}
