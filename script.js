@@ -80,7 +80,7 @@ window.onload = function() {
     document.getElementById('submit').addEventListener('submit', function(event) {
         event.preventDefault();
         // these IDs from the previous steps
-        emailjs.sendForm('contact_service', 'contact_form', this)
+        emailjs.sendForm('template_4v5p5t9', 'template_4v5p5t9', this)
             .then(() => {
                 console.log('SUCCESS!');
             }, (error) => {
