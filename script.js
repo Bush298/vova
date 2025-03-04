@@ -70,3 +70,21 @@ function openContactForm(){
 function closeContactForm(){
     contactForm.classList.remove('contact_open')
 }
+
+
+emailjs.init({
+    publicKey:'QmR0JyBmT7XYvJ4FY'
+})
+
+window.onload = function() {
+    document.getElementById('submit').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // these IDs from the previous steps
+        emailjs.sendForm('contact_service', 'contact_form', this)
+            .then(() => {
+                console.log('SUCCESS!');
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+    });
+}
