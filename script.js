@@ -72,19 +72,11 @@ function closeContactForm(){
 }
 
 
-emailjs.init({
-    publicKey:'QmR0JyBmT7XYvJ4FY'
-})
+    emailjs.init("QmR0JyBmT7XYvJ4FY"); // Твой публичный ключ
 
-window.onload = function() {
-    document.getElementById('submit').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // these IDs from the previous steps
-        emailjs.sendForm('template_4v5p5t9', 'template_4v5p5t9', this)
-            .then(() => {
-                console.log('SUCCESS!');
-            }, (error) => {
-                console.log('FAILED...', error);
-            });
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault()
+
+        let email = document.getElementById('email')
+        let email = document.getElementById('email')
     });
-}
