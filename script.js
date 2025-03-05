@@ -77,6 +77,15 @@ function closeContactForm(){
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault()
 
-        let email = document.getElementById('email')
-        let email = document.getElementById('email')
+        let email = document.getElementById('email').value
+        let name = document.getElementById('name').value
+        let description = document.getElementById('description').value
+
+        let botToken = "7840011938:AAEIyDQcVWA5b6Aj9KvlJny5_xBgPFGRfbY";
+        let chatId = "1261690142";  // Узнать можно через @userinfobot
+    
+        let text = `Email: ${email}\nОписание: ${description}\nИмя: ${name}`;
+        let url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+        
+        fetch(url).then(response => alert("Сообщение отправлено!"));
     });
