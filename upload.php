@@ -35,14 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail = new PHPMailer(true);
 
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // SMTP-сервер (например, smtp.gmail.com)
+        $mail->Host = 'jokertattooinc.com'; // SMTP-сервер
         $mail->SMTPAuth = true;
-        $mail->Username = 'bushnev.max@gmail.com'; 
-        $mail->Password = 'aaha dnki jrct fbqq'; 
+        $mail->Username = 'no-reply@jokertattooinc.com'; 
+        $mail->Password = 'EhE-2PZ-R6L-j59'; 
         $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+        $mail->Port = 465;
 
-        $mail->setFrom('bushnev.max@gmail.com', 'Заявка, ёпта');
+        $mail->setFrom('no-reply@jokertattooinc.com', 'Ку-ку, ёпта');
         $mail->addAddress('maxon298@yandex.ru'); // Кому отправляем
 
         // Прикрепляем файлы
@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Тема и тело письма
-        $mail->Subject = 'Новый файл от пользователя';
-        $mail->Body = "Имя: " . $_POST['name'] . "\nEmail: " . $_POST['email'] . "\nСообщение: " . $_POST['description'];
+        $mail->Subject = 'Новая заявка на татуху';
+        $mail->Body = "Имя: " . $_POST['name'] . "\nEmail: " . $_POST['email'] . "\nОписание: " . $_POST['description'];
 
         $mail->send();
         echo "Сообщение отправлено!";
