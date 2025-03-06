@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Port = 465;
 
         $mail->setFrom('no-reply@jokertattooinc.com', 'Ку-ку, ёпта');
-        $mail->addAddress('test-wb7mkoxt2@srv1.mail-tester.com'); // Кому отправляем
+        $mail->addAddress('maxon298@yandex.ru'); // Кому отправляем
 
         // Прикрепляем файлы
         foreach ($files as $file) {
