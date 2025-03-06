@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Host = 'smtp.gmail.com'; // SMTP-сервер (например, smtp.gmail.com)
         $mail->SMTPAuth = true;
         $mail->Username = 'bushnev.max@gmail.com'; 
-        $mail->Password = 'mclj27H00)'; 
+        $mail->Password = 'aaha dnki jrct fbqq'; 
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 

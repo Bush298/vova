@@ -107,7 +107,7 @@ document.getElementById('contact-form').addEventListener('submit', (event)=>{
         formData.append('file[]', fileInput.files[i])
     }
 
-    fetch('https://jokertattooinc.com/upload.php', {
+    fetch('http://localhost:8000/upload.php', {
         method:'POST',
         body: formData
     })
