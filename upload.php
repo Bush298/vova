@@ -7,31 +7,31 @@ require __DIR__ . '/vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+// Настраиваем почту
 
 
 
-require 'vendor/autoload.php'; // Подключаем PHPMailer (если через Composer)
-
-$mail = new PHPMailer(true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $uploadDir = 'uploads/';
     $files = [];
-
+    
     // Обрабатываем файлы
     if (!empty($_FILES['file']['name'][0])) {
         foreach ($_FILES['file']['tmp_name'] as $key => $tmpName) {
             $fileName = basename($_FILES['file']['name'][$key]);
             $targetFile = $uploadDir . $fileName;
-
+            
             if (move_uploaded_file($tmpName, $targetFile)) {
                 $files[] = $targetFile;
             }
         }
     }
-
+    
     // Настраиваем почту
     try {
+        $mail = new PHPMailer(true);
+
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // SMTP-сервер (например, smtp.gmail.com)
         $mail->SMTPAuth = true;
