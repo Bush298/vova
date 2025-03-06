@@ -2,7 +2,7 @@
 $to = "maxon298@yandex.ru"; // Кому отправлять
 $subject = "Письмо с файлом";
 $from = "bushnev.max@gmail.com"; // Твой email
-$file = "uploads/test.jpg"; // Путь к файлу
+$file = "uploads/test.png"; // Путь к файлу
 
 // Заголовки письма
 $boundary = md5(time());
