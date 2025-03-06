@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->SMTPAuth = true;
         $mail->Username = 'no-reply@jokertattooinc.com'; 
         $mail->Password = 'EhE-2PZ-R6L-j59'; 
-        $mail->SMTPSecure = 'tls';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
         $mail->Port = 465;
 
         $mail->setFrom('no-reply@jokertattooinc.com', 'Ку-ку, ёпта');
