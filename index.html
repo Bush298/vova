@@ -107,14 +107,18 @@
                 </div>
             </section>
 
-            <section class="contact">
+            <section class="contact contact_open">
                 <div class="wrapper">
                     <div class="contact__inner">
                         
                         <h3 class="appointment__title appointment__title_modal ">almost there <img src="/assets/images/close.svg" onclick="closeContactForm()" class="close-btn"></h3>
                         
                         
-                        <form action="" method="post" id="contact-form" class="contact-form">
+
+
+
+
+                        <form action="" method="post" enctype="multipart/form-data" id="contact-form" class="contact-form">
                             <div class="name-email">
                                 <div class="name-email__block"> 
                                     <label for="name">Name</label><br>
@@ -130,23 +134,31 @@
                             <label class="description" for="description">Tattoo Description</label>
                             <textarea type="text" name="description" id="description" maxlength="1500" placeholder="TELL ABOUT YOUR PROJECT" autocomplete="off" class="description-input"></textarea>
                             
-                            <label for="upload" class="upload">Image References</label>
+                            <label for="file" class="upload">Image References
                             <div class="upload__btn">
 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" class="upload-loader__image">
                                     <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M12 12v9"/>
                                     <path d="m16 16-4-4-4 4"/>
                                 </svg>
-                                <p>ur refs</p>
-                                <input type="file">
+                                <p>less than 3mb pls</p>
+                                <input   type="file" id="file" class="file" accept=".jpg, .jpeg, .png" name="file[]" multiple>
                             </div>
-                            
+                            </label>
+
                             <label for="checkbox" class="checkbox">
                                 <input type="checkbox" name="checkbox" id="checkbox" placeholder="" required>
                                 <span class="agree-check">I have read and agree to the <a href="">Privacy Policy</a></span>
                             </label>
                             <button type="submit" id="submit" class="submit">submit</button>
                         </form>
+
+
+
+
+
+
+
                     </div>
                 </div>
             </section>
@@ -173,9 +185,5 @@
         
     </div>
     </body>
-    <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
     <script src="script.js"></script>
 </html>

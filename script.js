@@ -71,21 +71,57 @@ function closeContactForm(){
     contactForm.classList.remove('contact_open')
 }
 
+let oversize = false
 
-    emailjs.init("QmR0JyBmT7XYvJ4FY"); // Твой публичный ключ
+function onFileUpload(event){
+    let files = event.target.files
+    console.log(files)
+    let totalSize = 0
+    for (i=0; i<files.length; i++) {
+        totalSize+= files[i].size
+    }
+    console.log('total size is ', totalSize)
 
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault()
-
-        let email = document.getElementById('email').value
-        let name = document.getElementById('name').value
-        let description = document.getElementById('description').value
-
-        let botToken = "7840011938:AAEIyDQcVWA5b6Aj9KvlJny5_xBgPFGRfbY";
-        let chatId = "1261690142";  // Узнать можно через @userinfobot
+    if (totalSize > 3000000) {
+        console.log('dohuya bratan')
+        oversize = true
+    } else {
+        console.log('zaebis')
+        oversize = false
+    }
     
-        let text = `Email: ${email}\nОписание: ${description}\nИмя: ${name}`;
-        let url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
-        
-        fetch(url).then(response => alert("Сообщение отправлено!"));
-    });
+
+}
+
+document.getElementById('file').addEventListener('change', onFileUpload)
+
+document.getElementById('contact-form').addEventListener('submit', (event)=>{
+    event.preventDefault()
+
+  
+    if(oversize){return}
+
+    let formData = new FormData(document.getElementById('contact-form'))
+    let fileInput = document.getElementById('file')
+    for (i=0; i<fileInput.files.length; i++){
+        formData.append('file[]', fileInput.files[i])
+    }
+
+    fetch('http://localhost:8000/upload.php', {
+        method:'POST',
+        body: formData
+    })
+
+
+
+    .then(response => response.text())
+    .then(result => {
+        console.log('ПАЛУЧИЛАСЬ ', result)
+    })
+
+    .catch(error => {
+        console.error(error)
+    })
+})
+
+

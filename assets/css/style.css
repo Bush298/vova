@@ -815,6 +815,7 @@ textarea{
 
 .upload{
     margin-top: 2em;
+    align-self: center;
 }
 
 .upload__btn{
@@ -822,6 +823,9 @@ textarea{
 
     margin-top: 1em;
     padding: 1em;
+
+    width: 5em;
+    align-self: center;
 
     border: 0.2em dashed white;
 
@@ -841,6 +845,9 @@ textarea{
 .upload__btn>svg{
     height: 4em;
 }
+.upload__btn>p{
+    font-size: 0.5em;
+}
 
 
 
@@ -854,3 +861,6 @@ input[type='checkbox'] {
     height: 1.2em;
 }
 
+.file{
+   display: none;
+}
