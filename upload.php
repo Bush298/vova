@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        
 
 
-        $mail->setFrom('no-reply@jokertattooinc.com', 'Joker Tattoo Inc.');
+        $mail->setFrom('bushnev.max@gmail.com', 'Joker Tattoo Inc.');
         $mail->addAddress('maxon298@yandex.ru'); // Кому отправляем
 
         // Прикрепляем файлы
