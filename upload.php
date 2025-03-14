@@ -35,13 +35,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail = new PHPMailer(true);
 
         $mail->isSMTP();
-        $mail->Host = 'jokertattooinc.com'; // SMTP-сервер
+        $mail->Host = 'smtp.gmail.com'; // SMTP-сервер
         $mail->SMTPAuth = true;
-        $mail->Username = 'no-reply@jokertattooinc.com'; 
-        $mail->Password = 'EhE-2PZ-R6L-j59'; 
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
-        $mail->Port = 465;
-        $mail->isHTML(false);
+        $mail->Username = 'bushnev.max@gmail.com'; 
+        $mail->Password = 'aaha dnki jrct fbqq'; 
+        $mail->SMTPSecure = 'tls'; 
+        $mail->Port = 587;
+       
 
 
         $mail->setFrom('no-reply@jokertattooinc.com', 'Joker Tattoo Inc.');
