@@ -864,3 +864,22 @@ input[type='checkbox'] {
 .file{
    display: none;
 }
+#submit{
+    margin: 0.7em auto;
+    margin-bottom: 0;
+    height: 1.3em;
+    width: 4em;
+}
+
+
+@media (max-width: 860px){
+    .appointment__title_modal{
+        display: inline;
+        font-size: 3em;
+        width: 7em;
+    }
+    .close-btn{
+        width: 0.4em;
+        right: -0.3em;
+    }
+}

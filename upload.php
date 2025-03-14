@@ -41,8 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Password = 'EhE-2PZ-R6L-j59'; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
         $mail->Port = 465;
+        $mail->isHTML(false);
 
-        $mail->setFrom('no-reply@jokertattooinc.com', 'Ку-ку, ёпта');
+
+        $mail->setFrom('no-reply@jokertattooinc.com', 'Joker Tattoo Inc.');
         $mail->addAddress('maxon298@yandex.ru'); // Кому отправляем
 
         // Прикрепляем файлы
