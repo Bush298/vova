@@ -107,20 +107,36 @@ document.getElementById('contact-form').addEventListener('submit', (event)=>{
         formData.append('file[]', fileInput.files[i])
     }
 
+    document.getElementById('submit').innerHTML = 'WAIT...'
+
     fetch('https://jokertattooinc.com/upload.php', {
         method:'POST',
         body: formData
     })
 
 
+    
 
     .then(response => response.text())
     .then(result => {
-        console.log('ПАЛУЧИЛАСЬ ', result)
+
+        document.getElementById('submit').innerHTML = 'THANKS!'
+        setTimeout(function(){
+            closeContactForm()
+            document.getElementById('submit').innerHTML = 'SUBMIT'
+        }, 2000)
+
     })
 
     .catch(error => {
         console.error(error)
+
+        document.getElementById('submit').innerHTML = 'TRY AGAIN'
+        setTimeout(function(){
+            closeContactForm()
+            document.getElementById('submit').innerHTML = 'SUBMIT'
+        }, 2000)
+
     })
 })
 
