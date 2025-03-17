@@ -713,7 +713,7 @@ footer{
 .contact{
     transition: margin-left .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     
-    margin-left: 100vw;
+    margin-left: 1000vw;
     position: fixed;
     top: 0; 
     left: 0;
