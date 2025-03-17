@@ -722,7 +722,7 @@ footer{
     height: 100dvh;
     background-color: #15191E;
     z-index: 100000;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -733,6 +733,7 @@ footer{
 .contact_open{
     transition: margin-left .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     margin-left: 0;
+    display: flex;
 }
 
 .contact__inner{
