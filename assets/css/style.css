@@ -713,15 +713,19 @@ footer{
 .contact{
     transition: margin-left .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     
-    margin-left: 100%;
+    margin-left: 100vw;
     position: fixed;
     top: 0; 
     left: 0;
 
-    width: 100%;
-    height: 100%;
+    width: 100dvw;
+    height: 100dvh;
     background-color: #15191E;
     z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 
 }
@@ -732,8 +736,6 @@ footer{
 }
 
 .contact__inner{
-    margin-top: 50dvh;
-    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -764,7 +766,8 @@ footer{
 
     display: flex; 
     flex-direction: column;
-    font-size: 1.5em;
+    align-items: center;
+    font-size: 1.2em;
     
 }
 
@@ -776,7 +779,7 @@ footer{
 
 
 .name-email__block{
-
+    width: 45%;
 }
 
 label{
@@ -790,6 +793,7 @@ input{
     border-radius: .2em;
     color: white;
     font-family: 'Inter', serif;
+    max-width: 12em ;
 }
 
 .description{
@@ -808,8 +812,9 @@ textarea{
 
     margin-top: 1em;
     resize: vertical;
-    min-height: 5em;
+    min-height: 4em;
     max-height: 20em;
+    width: 20em;
 }
 
 
@@ -877,9 +882,19 @@ input[type='checkbox'] {
         display: inline;
         font-size: 3em;
         width: 7em;
+        letter-spacing: 0;
     }
     .close-btn{
         width: 0.4em;
         right: -0.3em;
+    }
+    .contact>.wrapper {
+        margin: 0;
+    }
+    .agree-check{
+        font-size: 0.7em;
+    }
+    .contact-input{
+       
     }
 }
