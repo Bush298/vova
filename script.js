@@ -126,7 +126,7 @@ document.getElementById('contact-form').addEventListener('submit', (event)=>{
         
         setTimeout(function(){
             closeContactForm()
-            window.location.assign('https://buy.stripe.com/test_bJeaEQ5vJ3E49gDehl7Re00');
+            window.location.assign('https://buy.stripe.com/fZu00l9fB58SfhScYXb3q00');
             document.getElementById('submit').innerHTML = 'SUBMIT'
             document.getElementById('submit').display = "block"
             document.getElementById('confirm').display = 'none'
