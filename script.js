@@ -107,7 +107,7 @@ document.getElementById('contact-form').addEventListener('submit', (event)=>{
         formData.append('file[]', fileInput.files[i])
     }
 
-    document.getElementById('submit').innerHTML = 'WAIT...'
+    document.getElementById('submit').innerHTML = 'UPLOADING...'
 
     fetch('https://jokertattooinc.com/upload.php', {
         method:'POST',
@@ -120,9 +120,10 @@ document.getElementById('contact-form').addEventListener('submit', (event)=>{
     .then(response => response.text())
     .then(result => {
 
-        document.getElementById('submit').innerHTML = 'THANKS!'
+        document.getElementById('submit').innerHTML = 'OPENING DEPOSIT PAYMENT...'
         setTimeout(function(){
             closeContactForm()
+            window.location.assign('https://buy.stripe.com/test_bJeaEQ5vJ3E49gDehl7Re00');
             document.getElementById('submit').innerHTML = 'SUBMIT'
         }, 2000)
 

@@ -6,7 +6,9 @@
 
 
 
-
+a{
+    text-decoration: none;
+}
 
 @keyframes slide-left {
     from {
