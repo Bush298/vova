@@ -120,12 +120,17 @@ document.getElementById('contact-form').addEventListener('submit', (event)=>{
     .then(response => response.text())
     .then(result => {
 
-        document.getElementById('submit').innerHTML = 'OPENING DEPOSIT PAYMENT...'
+        document.getElementById('submit').display = 'none'
+        document.getElementById('confirm').display = 'block'
+        
+        
         setTimeout(function(){
             closeContactForm()
             window.location.assign('https://buy.stripe.com/test_bJeaEQ5vJ3E49gDehl7Re00');
             document.getElementById('submit').innerHTML = 'SUBMIT'
-        }, 2000)
+            document.getElementById('submit').display = "block"
+            document.getElementById('confirm').display = 'none'
+        }, 5000)
 
     })
 
